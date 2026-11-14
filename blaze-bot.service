@@ -1,0 +1,12 @@
+[Unit]
+Description=Blaze Telegram bot
+After=network.target
+
+[Service]
+WorkingDirectory=/opt/blaze/bot
+EnvironmentFile=/opt/blaze/bot/.env
+ExecStart=/opt/blaze/venv/bin/python bot.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
